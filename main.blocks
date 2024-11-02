@@ -1,0 +1,7 @@
+<xml xmlns="https://developers.google.com/blockly/xml"><variables><variable id="N7N9Qg73!UKD|D1O$2zS">bst_reihe</variable><variable id="t+.9:ZuQ4Ex!*a-=*dOC">arr_zeichen</variable><variable id="@NfkmGYfXjooxAjC`6}A">arr_neop_strips</variable><variable id="L:Z2i72Odc,5Rl+Cx2uX">s</variable><variable id="P`G:8Btc0z:kLuVAA+9D">arr_neop_settings</variable><variable id="!uL(j]yyuGv.z]X6wEpe">pixelAnzahl</variable><variable id="JY%1];?7W|kP4HqXLttj">arr_tech_matrix</variable><variable id="3itz:U3+^m/551Oo4JAc">strip</variable><variable id="FO2g%YT_DaI-T*)/Tz#*">strip_helligkeit</variable><variable id="2{_g7QW_bnADz-++$%AK">neo_strip_anzahl</variable><variable id="E{%WOz?uN3ZXfu!nf7R|">strip_pause</variable><variable id="v]K]+NaED|fOF@Ds`yFM">i</variable><variable id="34UTM!+A|GkQH$#D)Kr{">arr_tech_pin</variable><variable id="|OD*/?80aTx/,EOWn#4c">bst_muster</variable></variables><comment id="pE:,#$[MH5[}$N)^_.0~" x="8037" y="20" w="200" h="120">
+ende Initialisierung
+</comment><comment id="Ahk%B+,ju)Nq1J`hdr^B" x="8282" y="20" w="160" h="120">
+test();
+</comment><comment id="~PU:!H/+R~M^EBWbFv~l" x="8487" y="20" w="160" h="120">
+zerlege()
+</comment></xml>
