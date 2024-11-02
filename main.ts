@@ -24,13 +24,15 @@ function loesche_matrix(snr: number) {
     arr_neop_strips[snr].clear()
     arr_neop_strips[snr].show()
 }
+
+
 function init_alphabet() {
     // bstreihenfolge einhalten
-    bst_reihe = "? ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜäöüZ0123456789!?.,*+-=≠:%abcdefghijklmnopqrstuvwxyz#$&()/@;<>[]|{}~€"
+    bst_reihe = "? ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜäöü0123456789!?.,*+-=≠:%abcdefghijklmnopqrstuvwxyz#$&()/@;<>[]|{}~€"
     arr_zeichen = [
-        [0, 14, 17, 1, 2, 4, 0, 4],
+        [0, 14, 17, 1, 2, 4, 0, 4], //?
         [0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 14, 17, 17, 31, 17, 17, 17],
+        [0, 14, 17, 17, 31, 17, 17, 17], //A
         [0, 30, 17, 17, 30, 17, 17, 30],
         [0, 14, 17, 16, 16, 16, 17, 14],
         [0, 28, 18, 17, 17, 17, 18, 28],
@@ -40,7 +42,7 @@ function init_alphabet() {
         [0, 17, 17, 17, 31, 17, 17, 17],
         [0, 14, 4, 4, 4, 4, 4, 14],
         [0, 15, 2, 2, 2, 2, 18, 12],
-        [0, 17, 18, 20, 24, 20, 18, 17],
+        [0, 17, 18, 20, 24, 20, 18, 17], //K
         [0, 16, 16, 16, 16, 16, 16, 31],
         [0, 17, 27, 21, 21, 17, 17, 17],
         [0, 17, 17, 25, 21, 19, 17, 17],
@@ -49,21 +51,21 @@ function init_alphabet() {
         [0, 14, 17, 17, 17, 21, 18, 13],
         [0, 30, 17, 17, 30, 20, 18, 17],
         [0, 14, 17, 16, 14, 1, 17, 14],
-        [0, 31, 4, 4, 4, 4, 4, 4],
+        [0, 31, 4, 4, 4, 4, 4, 4],       //T
         [0, 17, 17, 17, 17, 17, 17, 14],
         [0, 17, 17, 17, 17, 17, 10, 4],
         [0, 17, 17, 17, 21, 21, 27, 17],
         [0, 17, 17, 10, 4, 10, 17, 17],
         [0, 17, 17, 10, 4, 4, 4, 4],
-        [0, 31, 1, 2, 4, 8, 16, 31],
-        [0, 10, 0, 4, 10, 17, 31, 17],
-        [0, 17, 14, 17, 17, 17, 17, 14],
-        [0, 17, 0, 17, 17, 17, 0, 14],
-        [0, 10, 0, 14, 1, 15, 17, 15],
-        [0, 10, 0, 0, 14, 17, 17, 14],
-        [0, 10, 0, 0, 17, 17, 17, 14],
-        [0, 31, 1, 2, 4, 8, 16, 31],
-        [0, 14, 17, 19, 21, 25, 17, 14],
+        [0, 31, 1, 2, 4, 8, 16, 31], //Z
+        [10, 0, 14, 17, 17, 31, 17, 17], //Ä
+        [10, 0, 14, 17, 17, 17, 17, 14], //Ö
+        [10, 0, 17, 17, 17, 17, 17, 14], //Ü
+        [0, 10, 0, 14, 1, 15, 17, 15], //ä
+        [0, 0, 10, 0, 14, 17, 17, 14], //ö
+        [0, 0, 10, 0, 17, 17, 17, 14], //ü
+        
+        [0, 14, 17, 19, 21, 25, 17, 14], //0
         [0, 4, 12, 4, 4, 4, 4, 14],
         [0, 14, 17, 1, 2, 4, 8, 31],
         [0, 31, 2, 4, 2, 1, 17, 14],
@@ -71,26 +73,28 @@ function init_alphabet() {
         [0, 31, 16, 30, 1, 1, 17, 14],
         [0, 6, 8, 16, 30, 17, 17, 14],
         [0, 31, 1, 2, 4, 4, 4, 4],
-        [0, 14, 17, 17, 14, 17, 17, 14],
-        [0, 14, 17, 17, 15, 1, 2, 12],
+        [0, 14, 17, 17, 14, 17, 17, 14], 
+        [0, 14, 17, 17, 15, 1, 2, 12],//9
+
         [0, 4, 4, 4, 4, 4, 0, 4],
         [0, 14, 17, 1, 2, 4, 0, 4],
         [0, 0, 0, 0, 0, 0, 12, 12],
-        [0, 14, 17, 1, 2, 4, 0, 4],
+        [0, 14, 17, 1, 2, 4, 0, 4], //*
         [0, 0, 0, 4, 21, 14, 21, 4],
-        [0, 0, 4, 21, 14, 21, 4, 0],
-        [0, 0, 0, 0, 31, 0, 0, 0],
-        [0, 0, 0, 31, 0, 31, 0, 0],
+        [0, 0, 4, 21, 14, 21, 4, 0], //-
+        [0, 0, 0, 0, 31, 0, 0, 0], //
+        [0, 0, 0, 31, 0, 31, 0, 0], //:
         [0, 1, 2, 31, 4, 31, 8, 16],
-        [0, 0, 12, 12, 0, 12, 12, 0],
-        [0, 24, 25, 2, 4, 8, 19, 3],
-        [0, 0, 0, 14, 1, 15, 17, 15],
-        [0, 16, 16, 22, 25, 17, 17, 14],
-        [0, 0, 0, 14, 16, 16, 17, 14],
-        [0, 1, 1, 13, 19, 17, 17, 15],
-        [0, 0, 0, 14, 17, 31, 16, 14],
+
+        [0, 0, 12, 12, 0, 12, 12, 0], //a
+        [0, 24, 25, 2, 4, 8, 19, 3], 
+        [0, 0, 0, 14, 1, 15, 17, 31],//c
+        [0, 16, 16, 22, 25, 17, 17, 14], //d
+        [0, 0, 0, 14, 16, 16, 17, 14], //e
+        [0, 1, 1, 13, 19, 17, 17, 15], //f
+        [0, 0, 0, 14, 17, 31, 16, 14 ], //g
         [0, 2, 5, 4, 14, 4, 4, 4],
-        [0, 0, 0, 15, 17, 15, 1, 14],
+        [0, 0, 0, 15, 17, 15, 1, 14], //
         [0, 16, 16, 22, 25, 17, 17, 17],
         [0, 4, 0, 12, 4, 4, 4, 14],
         [0, 2, 0, 2, 2, 2, 18, 12],
@@ -130,19 +134,29 @@ function init_alphabet() {
     ]
 
 }
-function init_strip(nrMatrix: number, hwMatrix: number, pin: number) {
+function init_strip(nrMatrix: number, hwMatrix: number,pin: number) {
     arr_neop_settings[nrMatrix].pin = pin;
     arr_neop_settings[nrMatrix].hwMatrix = arr_tech_matrix[hwMatrix];
     pixelAnzahl = arr_tech_matrix[nrMatrix][0] * arr_tech_matrix[nrMatrix][1]
+
+    // pixelAnzahl = breite;
     let strip = neopixel.create(arr_tech_pin[pin], pixelAnzahl, NeoPixelMode.RGB)
     strip.setBrightness(strip_helligkeit)
     arr_neop_strips[nrMatrix] = strip
+    
     strip.clear()
     strip.show()
+    
     // neo_strip_anzahl = Math.max(nrMatrix + 1, neo_strip_anzahl)
-    neo_strip_anzahl=1;
+    neo_strip_anzahl = 1;
+
+    
 }
 // }
+input.onButtonPressed(Button.A, function () {
+    automat = !automat;
+})
+
 input.onButtonPressed(Button.AB, function () {
     let s = 0
     // for (let s=0;s<neo_strip_anz;s++) {
@@ -153,20 +167,21 @@ input.onButtonPressed(Button.AB, function () {
 
 // set_helligkeit(80, 5000)
 // testbetrieb
-function test() {
-    init_strip(0, 0, 0)
-    set_helligkeit(40, 1000)
+function test(txt:string) {
+    // init_strip(0, 0, 0)
+    // set_helligkeit(40, 1000)
     // neop_scroll_zch(0, "ABCDEFGHIJKLMNOabcdefgh", NeoPixelColors.Green, -3)
     // neop_schreibe_zch(0,"B CA",NeoPixelColors.Red)
-    
+
     // basic.showNumber(neo_strip_anzahl)
-    
+
     if (neo_strip_anzahl > 1) {
         neop_schreibe_zch(0, "AB", NeoPixelColors.Green)
     } else if (neo_strip_anzahl > 2) {
         neop_schreibe_zch(2, "12340", NeoPixelColors.Blue)
     } else {
-        neop_schreibe_zch(0, "ABC", NeoPixelColors.Green)
+        // neop_schreibe_zch(0, "AdefgÄÖÜäöü0a", NeoPixelColors.Green)
+        neop_schreibe_zch(0, txt, NeoPixelColors.Green)
     }
 }
 // muss sein, damit der index nicht fehlläuft
@@ -176,91 +191,43 @@ function default_strip_data() {
     // arr_neop_settings.push({ pin: arr_tech_pin[2], hwMatrix: arr_tech_matrix[1] })
 }
 
+function zufallsFarbe(): number {
+    let rot = Math.randomRange(0, 255)
+    let gruen = Math.randomRange(0, 255)
+    let blau = Math.randomRange(0, 255)
+    return neopixel.rgb(rot, gruen, blau)
+}
+
 let sss = 0;
-let automat = 0;
+let automat = false;
 let pixelAnzahl = 0
 let neo_strip_anzahl = 0
 let strip_pause = 0
 let strip_helligkeit = 0
 let arr_tech_matrix: number[][] = []
-let bst_reihe: string = ""
+
 let arr_neop_settings: Array<neop> = []
 let arr_neop_strips: Array<neopixel.Strip> = []
 let shift: number = 0
-function neop_scroll_zch(snr: number, zch_str: string = "A", color: number, abstand: number = 0) {
-    let zeichen_matrix: Array<number> = []
 
-    let mx = arr_neop_settings[snr].hwMatrix[0];
-    let my = arr_neop_settings[snr].hwMatrix[1];
-
-    let is_type = 0
-    let zch_len = zch_str.length
-    if (zch_len > 1) {
-        is_type = 1; //wort
-        let arr_split = zch_str.split(",")
-        if (arr_split.length > 2) {
-            is_type = 2; //array
-            zeichen_matrix = arr_split.map(wert => parseInt(wert));
-            zch_len = 1;
-        }
-    }
-
-    let a_bin_zeilen: number[][] = [[], []];
-    for (let n = 0; n < zch_len; n++) {
-        if (is_type < 2) { //no array
-            let zch: string = zch_str[n]
-            let found = bst_reihe.indexOf(zch);
-            if (found == -1) {
-                found = 0;
-            }
-            zeichen_matrix = arr_zeichen[found]
-        }
-
-        zeichen_matrix.forEach(function (zahl, zeile) {
-            let a_bin_zahl: Array<number> = [];
-            for (let bit = mx + abstand; bit >= 0; bit--) {
-                let sss = zahl & Math.pow(2, bit);
-                a_bin_zahl.push(sss > 0 ? 1 : 0);
-            }
-
-            if (a_bin_zeilen[zeile] == undefined) {
-                a_bin_zeilen[zeile] = a_bin_zahl;
-            } else {
-                a_bin_zeilen[zeile] = a_bin_zeilen[zeile].concat(a_bin_zahl)
-            }
-        })
-    }
-
-    let len = a_bin_zeilen[0].length;
-    
-  
-    for (let pos = 0; pos <= len; pos++) {
-        arr_neop_strips[snr].clear()
-        arr_neop_strips[snr].show()
-
-        a_bin_zeilen.forEach(function (a_dig, z) {
-            for (let b = 0; b < mx; b++) {
-                let wert = a_dig[b + pos];
-                if (wert) {
-                    let px = (z) * mx + ((z % 2) ? (b) : (mx - 1 - b))
-                    arr_neop_strips[snr].setPixelColor(px, color);
-                    
-                }
-            }
-            arr_neop_strips[snr].show()
-        })
-        pause(strip_pause / 10)
-        arr_neop_strips[snr].show()
-    }
-}
 function neop_schreibe_zch(snr: number, zch_str: string = "A", color: number) {
     let zeichen_matrix2: Array<number> = []
 
     let mx2 = arr_neop_settings[snr].hwMatrix[0];
     let my2 = arr_neop_settings[snr].hwMatrix[1];
 
+
+
+    my2 = zch_str.length;
+    arr_neop_settings[snr].hwMatrix[1] = my2 * 6;
+    init_strip(0, 0, 0)
+    arr_neop_strips[snr].showRainbow(1, 360)
+
+
+
+
     let is_type2 = 0; //buchstabe
-sss=snr;
+    sss = snr;
     let zch_len2 = zch_str.length
     if (zch_len2 > 1) {
         is_type2 = 1; // wort
@@ -274,10 +241,10 @@ sss=snr;
 
     arr_neop_strips[snr].clear()
     arr_neop_strips[snr].show()
-
+    let mycolor = zufallsFarbe();
 
     for (let o = 0; o < zch_len2; o++) {
-        let zch2:string;
+        let zch2: string;
         if (is_type2 < 2) { //no array
             zch2 = zch_str[o]
             let found2 = bst_reihe.indexOf(zch2);
@@ -288,6 +255,8 @@ sss=snr;
         }
         // arr_neop_strips[snr].clear()
         // arr_neop_strips[snr].show()
+       
+
         basic.showString(zch2)
         zeichen_matrix2.forEach(function (zahl, zeile) {
             for (let bit2 = 0; bit2 < mx2; bit2++) {
@@ -297,26 +266,27 @@ sss=snr;
                 //b=z, z=mx-1-bit
                 if (zahl & Math.pow(2, (bit2 + shift + mx2) % mx2)) {
                     // let px2 = z * mx2 + ((z % 2) ? (mx2 - 1 - c) : c)
-                    let px2 = z * mx2 + ((z % 2)==0 ? (mx2 -1 - c) : c)
+                    let px2 = z * mx2 + ((z % 2) == 0 ? (mx2 - 1 - c) : c)
                     arr_neop_strips[snr].setPixelColor(px2, color);
-                //    basic.showNumber(c)
+                    // arr_neop_strips[snr].showRainbow(1, 360)
+                    //    basic.showNumber(c)
                 }
             }
         })
         // arr_neop_strips[snr].show()
-        arr_neop_strips[sss].show();
+        // arr_neop_strips[sss].show();
         if (is_type2 == 1) {
-            pause(strip_pause)
+            // pause(strip_pause)
         }
-        
-        arr_neop_strips[sss].rotate(16*4); 
+
+        arr_neop_strips[sss].rotate(16 * 3);
         arr_neop_strips[sss].show();
 
         // arr_neop_strips[snr].rotate(0);
         // arr_neop_strips[snr].show();
     }
-    automat=1;
-   
+    automat = true;
+
 }
 interface neop {
     pin: number;
@@ -324,7 +294,7 @@ interface neop {
 }
 // hardwareeinstellungen ########################### 3 Matriken
 // entweder alte verdrahtung, dann 32 x 8 oder 68 x 32
-arr_tech_matrix = [[8,32],[8, 8], [5, 7], [16, 16]]
+arr_tech_matrix = [[8, 32], [8, 8], [5, 7], [16, 16]]
 let arr_tech_pin = [
     DigitalPin.P0,
     DigitalPin.P1,
@@ -343,9 +313,10 @@ let bst_muster = [
     31,
     31
 ]
+let bst_reihe:string ="";
 strip_helligkeit = 50
 // aucha scrollspeed
-strip_pause =100
+strip_pause = 300
 let arr_zeichen: number[][];
 neo_strip_anzahl = 1
 // ende variable
@@ -355,12 +326,13 @@ default_strip_data()
 basic.showIcon(IconNames.No)
 // test();
 
-test();
+test("Das ist eine gute Möglichkeite * ");
+// test("Das ist eine gute Möglichkeite * ");
 
 basic.forever(() => {
     if (automat) {
-        
+
         arr_neop_strips[sss].rotate(16); arr_neop_strips[sss].show();
-        basic.pause(100)
+        basic.pause(strip_pause)
     }
 })
